@@ -4,12 +4,14 @@ import auth from '../middlewares/auth';
 
 const router=routerx();
 
-router.post('/add',auth.verifyAlmacenero, ingresoController.add);
-router.get('/query',auth.verifyAlmacenero, ingresoController.query);
-router.get('/list',auth.verifyAlmacenero, ingresoController.list)
-// router.put('/update',auth.verifyAlmacenero, categoriaController.update);
-// router.delete('/remove',auth.verifyAlmacenero, categoriaController.remove);
-router.put('/activate',auth.verifyAlmacenero, ingresoController.activate);
-router.put('/deactivate',auth.verifyAlmacenero, ingresoController.deactivate);
+router.post('/add',auth.verifyAlmacenero,ingresoController.add);
+router.get('/query',auth.verifyAlmacenero,ingresoController.query);
+router.get('/list',auth.verifyAlmacenero,ingresoController.list);
+/*
+router.put('/update',auth.verifyAlmacenero,ingresoController.update);
+router.delete('/remove',auth.verifyAlmacenero,ingresoController.remove);
+*/
+router.put('/activate',auth.verifyAlmacenero,ingresoController.activate);
+router.put('/deactivate',auth.verifyAlmacenero,ingresoController.deactivate);
 
 export default router;
