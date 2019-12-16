@@ -7,6 +7,7 @@ const router=routerx();
 router.post('/add',auth.verifyVendedor,ventaController.add);
 router.get('/query',auth.verifyVendedor,ventaController.query);
 router.get('/list',auth.verifyVendedor,ventaController.list);
+router.get('/grafico12meses',auth.verifyUsuario,ventaController.grafico12meses);
 /*
 router.put('/update',auth.verifyAlmacenero,ventaController.update);
 router.delete('/remove',auth.verifyAlmacenero,ventaController.remove);
