@@ -5,9 +5,7 @@ import Persona from './persona';
 import Ingreso from './ingreso';
 import Venta from './venta';
 
-
 export default {
-
     Categoria,
     Articulo,
     Usuario,

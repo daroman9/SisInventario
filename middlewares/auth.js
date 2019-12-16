@@ -1,5 +1,4 @@
 import tokenService from '../services/token';
-
 export default {
     verifyUsuario: async (req,res,next) => {
         if (!req.headers.token){
@@ -7,11 +6,10 @@ export default {
                 message: 'No token'
             });
         }
-        const response = await tokenService.decode(req.headers.token);
-        if (response.rol=='Administrador' || response.rol== 'Vendedor' || response.rol=='Almacenero'){
+        const response=await tokenService.decode(req.headers.token);
+        if (response.rol =='Administrador' || response.rol == 'Vendedor' || response.rol=='Almacenero'){
             next();
-        }
-        else{
+        } else{
             return res.status(403).send({
                 message: 'No autorizado'
             });
@@ -23,11 +21,10 @@ export default {
                 message: 'No token'
             });
         }
-        const response = await tokenService.decode(req.headers.token);
-        if (response.rol=='Administrador'){
+        const response=await tokenService.decode(req.headers.token);
+        if (response.rol =='Administrador'){
             next();
-        }
-        else{
+        } else{
             return res.status(403).send({
                 message: 'No autorizado'
             });
@@ -39,11 +36,10 @@ export default {
                 message: 'No token'
             });
         }
-        const response = await tokenService.decode(req.headers.token);
-        if (response.rol=='Administrador' || response.rol=='Almacenero'){
+        const response=await tokenService.decode(req.headers.token);
+        if (response.rol =='Administrador' || response.rol=='Almacenero'){
             next();
-        }
-        else{
+        } else{
             return res.status(403).send({
                 message: 'No autorizado'
             });
@@ -55,15 +51,13 @@ export default {
                 message: 'No token'
             });
         }
-        const response = await tokenService.decode(req.headers.token);
-        if (response.rol=='Administrador' || response.rol== 'Vendedor'){
+        const response=await tokenService.decode(req.headers.token);
+        if (response.rol =='Administrador' || response.rol == 'Vendedor'){
             next();
-        }
-        else{
+        } else{
             return res.status(403).send({
                 message: 'No autorizado'
             });
         }
-    },
-
-};
+    }
+}

@@ -1,12 +1,11 @@
 {
-  "name": "Mevn",
+  "name": "sistema",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js --exec babel-node",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js --exec babel-node"
   },
   "keywords": [],
   "author": "",
@@ -17,14 +16,13 @@
     "babel-preset-stage-3": "^6.24.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.16.4",
     "express-promise-router": "^3.0.3",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.8.0",
-    "morgan": "^1.9.1",
-    "nodemo": "^1.0.0"
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.10",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.1"
+    "nodemon": "^1.18.9"
   }
 }
